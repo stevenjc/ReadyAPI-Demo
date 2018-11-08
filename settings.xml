@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="Demo SoapUI Project" soapui-version="6.0.0" resourceRoot="" id="61e04082-3ec6-4977-b3af-d6600f20ae9b" abortOnError="false" runType="SEQUENTIAL" activeEnvironment="Default environment" updated="2.5.0" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+    <con:description>Sends requests to SOAP- and REST-based local virtual services on different ports.</con:description>
+    <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+        <con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting>
+        <con:setting id="GeneratableJUnitReport@Folder">C:\dev\htmlreports</con:setting>
+        <con:setting id="ReportTitle">SoapUI Report</con:setting>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value="XML"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Slack Channel(s)" value=""/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Test Suite Tags" value=""/>
+  <con:entry key="Select Report Type" value="JUnit-Style report for automation"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Test Suite" value="TestSuite"/>
+  <con:entry key="Run in-process" value="false"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Test Case Tags" value=""/>
+  <con:entry key="Export JUnit Results with test properties" value="true"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Test Case" value="Data Driven REST TestCase"/>
+  <con:entry key="Slack Access Token" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin"/>
+  <con:entry key="Environment" value="dev"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value="${WORKSPACE}"/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting><con:setting id="WsdlSettings@cache-wsdls">false</con:setting></con:settings>
+    <con:vcsConfiguration><con:vcsName>Git</con:vcsName><con:repositoryIdentifier>https://github.com/stevenjc/ReadyAPI-Demo.git</con:repositoryIdentifier></con:vcsConfiguration>
+    
+    
+    
+    
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:requirements/>
+    <con:properties>
+        <con:property>
+            <con:name>Some Property</con:name>
+            <con:value>with a value</con:value>
+        </con:property>
+    </con:properties>
+    <con:wssContainer/>
+    <con:databaseConnectionContainer><con:databaseConnection><con:name>Sample</con:name><con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:password/><con:connectionProperties/></con:databaseConnection><con:databaseConnection><con:name>Postgres</con:name><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://127.0.0.1:5432/database?user=postgres&amp;password=PASS_VALUE</con:connectionString><con:password>postgre</con:password><con:connectionProperties/></con:databaseConnection></con:databaseConnectionContainer>
+    <con:jmsConnectionContainer/>
+    <con:oAuth2ProfileContainer/>
+    <con:oAuth1ProfileContainer/>
+    
+    <con:reporting/><con:beforeRunScript>virtRunner.run("ServiceSoapBinding MockService")
+        virtRunner.run("RESTMockService")
+    </con:beforeRunScript>
+    <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+        <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+ def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+def headers = request.requestHeaders
+if (headers.containsKey('auth_token2') == false) {
+ 	headers.put('auth_token2', token)
+	request.requestHeaders = headers
+}</con:script>
+    </con:eventHandlers>
+    <con:sensitiveInformation/>
+    <con:environment id="a4c83565-407a-445f-aef0-20875c955ee7" name="test"><con:service type="SOAP" name="ServiceSoapBinding"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint></con:service><con:service type="REST" name="http://localhost:8084"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://localhost:8084</con:endpoint></con:service><con:property><con:name>Some Property</con:name><con:value>with a value</con:value></con:property><con:databaseConnectionContainer><con:databaseConnection><con:name>Sample</con:name><con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:password/><con:connectionProperties/></con:databaseConnection><con:databaseConnection><con:name>Postgres</con:name><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://127.0.0.1:5432/database?user=postgres&amp;password=PASS_VALUE</con:connectionString><con:password>postgre</con:password><con:connectionProperties/></con:databaseConnection></con:databaseConnectionContainer><con:jmsConnectionContainer/></con:environment><con:environment id="7b6fec38-2cc4-4e24-a710-c6782a1f7a32" name="dev"><con:service type="SOAP" name="ServiceSoapBinding"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint></con:service><con:service type="REST" name="http://localhost:8084"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://dev.localhost:8084</con:endpoint></con:service><con:property><con:name>Some Property</con:name><con:value>with a value</con:value></con:property><con:databaseConnectionContainer><con:databaseConnection><con:name>Sample</con:name><con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:password/><con:connectionProperties/></con:databaseConnection><con:databaseConnection><con:name>Postgres</con:name><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://127.0.0.1:5432/database?user=postgres&amp;password=PASS_VALUE</con:connectionString><con:password>postgre</con:password><con:connectionProperties/></con:databaseConnection></con:databaseConnectionContainer><con:jmsConnectionContainer/></con:environment><con:environment id="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad" name="prod"><con:service type="SOAP" name="ServiceSoapBinding"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="">http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint></con:service><con:service type="REST" name="http://localhost:8084"><con:endpoint authProfile="Inherit From Parent" username="" password="" domain="" incomingWss="" outgoingWss="" wssTimeToLive="" wssType="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://prod.localhost:8084</con:endpoint></con:service><con:property><con:name>Some Property</con:name><con:value>with a value</con:value></con:property><con:databaseConnectionContainer><con:databaseConnection><con:name>Sample</con:name><con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:password/><con:connectionProperties/></con:databaseConnection><con:databaseConnection><con:name>Postgres</con:name><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://127.0.0.1:5432/database?user=postgres&amp;password=PASS_VALUE</con:connectionString><con:password>postgre</con:password><con:connectionProperties/></con:databaseConnection></con:databaseConnectionContainer><con:jmsConnectionContainer/></con:environment><con:authRepository><con:basicAuthEntry><con:name>dev</con:name><con:type>Basic</con:type></con:basicAuthEntry><con:oAuth20AzureAuthEntry><con:name>sample</con:name><con:type>OAuth 2.0 (Azure)</con:type><con:accessTokenPosition>HEADER</con:accessTokenPosition><con:manualAccessTokenExpirationTimeUnit>SECONDS</con:manualAccessTokenExpirationTimeUnit><con:oAuth2Flow>AUTHORIZATION_CODE_GRANT</con:oAuth2Flow><con:refreshAccessTokenMethod>AUTOMATIC</con:refreshAccessTokenMethod></con:oAuth20AzureAuthEntry></con:authRepository>
+    <con:tags><con:tag><con:id>28902653-cd78-4830-8bb2-7143c976df77</con:id><con:name>DDT</con:name></con:tag><con:tag><con:id>c9efde76-139b-4468-aa39-a6472c796cb4</con:id><con:name>REST</con:name></con:tag><con:tag><con:id>14c76f1f-1ad9-49d9-b09f-a33ddf0e79b2</con:id><con:name>Accounts</con:name></con:tag></con:tags>
+</con:soapui-project>

@@ -1,0 +1,7 @@
+ServiceSoapBinding
+http%3A%2F%2Flocalhost%3A8084
+Demo-TestCases
+JDBC-Tests
+ServiceSoapBinding-MockService
+REST-Demo-Service
+JDBC-Virtual-Service-1
