@@ -61,7 +61,7 @@
         </con:property>
     </con:properties>
     <con:wssContainer/>
-    <con:databaseConnectionContainer><con:databaseConnection><con:name>Sample</con:name><con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:password/><con:connectionProperties/></con:databaseConnection><con:databaseConnection><con:name>Postgres</con:name><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://127.0.0.1:5432/database?user=postgres&amp;password=PASS_VALUE</con:connectionString><con:password>postgre</con:password><con:connectionProperties/></con:databaseConnection></con:databaseConnectionContainer>
+    <con:databaseConnectionContainer><con:databaseConnection><con:name>Sample</con:name><con:driver xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:connectionString xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:password/><con:connectionProperties/></con:databaseConnection><con:databaseConnection><con:name>Postgres</con:name><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString><con:password>Sandpiper16</con:password><con:connectionProperties/></con:databaseConnection></con:databaseConnectionContainer>
     <con:jmsConnectionContainer/>
     <con:oAuth2ProfileContainer/>
     <con:oAuth1ProfileContainer/>
@@ -70,7 +70,7 @@
         virtRunner.run("RESTMockService")
     </con:beforeRunScript>
     <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
-        <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+        <con:script disabled="true">// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to SoapUI Pro tests
 
 // If hardcoding the token, uncomment and change line 5
