@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockAction name="buy" method="POST" resourcePath="/buy" id="ac8250b4-a453-4acb-ace2-9cb35ecec996" xmlns:con="http://eviware.com/soapui/config">
-            <con:settings><con:setting id="ac8250b4-a453-4acb-ace2-9cb35ecec996fileName">buy</con:setting></con:settings>
+<con:restMockAction name="buy" method="POST" resourcePath="/buy" id="0ac178fa-4500-41b2-81f7-429d9b78804d" xmlns:con="http://eviware.com/soapui/config">
+            <con:settings><con:setting id="ac8250b4-a453-4acb-ace2-9cb35ecec996fileName">buy</con:setting><con:setting id="0ac178fa-4500-41b2-81f7-429d9b78804dfileName">buy</con:setting></con:settings>
             <con:defaultResponse>Item 1 Response</con:defaultResponse>
             <con:dispatchStyle>SCRIPT</con:dispatchStyle>
             <con:dispatchConfig/>
@@ -39,7 +39,7 @@
             <con:dispatchXPath/>
             <con:parameterDispatcherRuleContainer/>
             <con:routeEnabled>false</con:routeEnabled><con:conditionalRoutingEnabled>false</con:conditionalRoutingEnabled><con:routeScript/>
-            <con:response name="Item 1 Response" id="86927b66-ccd6-46a8-b11c-66f0aebf0791" httpResponseStatus="200" mediaType="application/json" dataSource="" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
+            <con:response name="Item 1 Response" id="47b9f07f-6f9a-475d-980c-bccb99ba3beb" httpResponseStatus="200" mediaType="application/json" dataSource="" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
                 <con:settings/>
                 <con:responseContent>{
                     "purchasestatus": {
@@ -50,7 +50,7 @@
                     }
                 </con:responseContent>
             </con:response>
-            <con:response name="Item 2 Response" id="80ac35e6-c05c-4127-99ed-178e29eb280a" httpResponseStatus="200" mediaType="application/json" dataSource="" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
+            <con:response name="Item 2 Response" id="4c7142fd-2815-4fb8-ae9c-598f30abd8e7" httpResponseStatus="200" mediaType="application/json" dataSource="" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070">
                 <con:settings/>
                 <con:responseContent>{
                     "purchasestatus": {
@@ -61,7 +61,7 @@
                     }
                 </con:responseContent>
             </con:response>
-            <con:response name="Item 3 Response" id="134ed770-2fed-43f9-b60c-954f0f4c0817" httpResponseStatus="200" mediaType="application/json" dataSource="">
+            <con:response name="Item 3 Response" id="ad2ecff5-c4ac-42ed-b374-5511b3afafd3" httpResponseStatus="200" mediaType="application/json" dataSource="">
                 <con:settings/>
                 <con:responseContent>{
                     "purchasestatus": {
@@ -72,7 +72,7 @@
                     }
                 </con:responseContent>
             </con:response>
-            <con:response name="Item 4 Response" id="f366eccd-b894-4f27-832d-6ed2559c3a2f" httpResponseStatus="200" mediaType="application/json" dataSource="">
+            <con:response name="Item 4 Response" id="581992b8-9693-4b2f-971e-090b5552e51a" httpResponseStatus="200" mediaType="application/json" dataSource="">
                 <con:settings/>
                 <con:responseContent>{
                     "purchasestatus": {
@@ -83,7 +83,7 @@
                     }
                 </con:responseContent>
             </con:response>
-            <con:response name="Item 5 Response" id="2df5d21d-9c4b-46c9-949f-7377591617b1" httpResponseStatus="200" mediaType="application/json" dataSource="">
+            <con:response name="Item 5 Response" id="fde682b4-3b1a-4fdf-a166-8fb20ecad694" httpResponseStatus="200" mediaType="application/json" dataSource="">
                 <con:settings/>
                 <con:responseContent>{
                     "purchasestatus": {
@@ -94,15 +94,15 @@
                     }
                 </con:responseContent>
             </con:response>
-            <con:response name="Invalid Session Id Fault" id="89b8d17c-a7d0-4cbb-b33b-b04a8f6d19a4" httpResponseStatus="401" dataSource="">
+            <con:response name="Invalid Session Id Fault" id="af76317a-9043-4586-8439-611e2e8b4e97" httpResponseStatus="401" dataSource="">
                 <con:settings/>
                 <con:responseContent>{ "Client" : "Invalid Session Id" }</con:responseContent>
             </con:response>
-            <con:response name="Unknown Response" id="e2651072-ef11-4706-acfc-55e653d02958" httpResponseStatus="501" mediaType="application/json" dataSource="">
+            <con:response name="Unknown Response" id="25ab6fe3-7a0b-4843-86b1-c55dd77ec699" httpResponseStatus="501" mediaType="application/json" dataSource="">
                 <con:settings/>
                 <con:responseContent/>
             </con:response>
-            <con:response name="WildCard Response" id="3698f1da-4882-4784-9c51-90827cb8f19a" httpResponseStatus="200" mediaType="application/json" dataSource="">
+            <con:response name="WildCard Response" id="ee8c008e-7ccd-4908-b894-a51d40abbb14" httpResponseStatus="200" mediaType="application/json" dataSource="">
                 <con:settings/>
                 <con:responseContent>{
                     "result": {

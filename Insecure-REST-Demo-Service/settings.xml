@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockService id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4" port="8084" path="/" host="localhost" name="REST Demo Service" routeModeEnabled="false" addUnmatchedOperation="false" routeUnmatchedOperation="false" xmlns:con="http://eviware.com/soapui/config">
-        <con:settings><con:setting id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4fileName">REST-Demo-Service</con:setting></con:settings>
+<con:restMockService port="8084" path="/" host="localhost" name="Insecure REST Demo Service" routeModeEnabled="false" addUnmatchedOperation="false" routeUnmatchedOperation="false" id="14d446ae-e536-4cc6-b5ba-afb03b0841f6" xmlns:con="http://eviware.com/soapui/config">
+        <con:settings><con:setting id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4fileName">REST-Demo-Service</con:setting><con:setting id="14d446ae-e536-4cc6-b5ba-afb03b0841f6fileName">Insecure-REST-Demo-Service</con:setting></con:settings>
         <con:properties/>
         <con:onRequestScript>
 </con:onRequestScript><con:afterRequestScript/><con:constraints>

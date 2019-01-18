@@ -2,6 +2,7 @@
 <con:testCase id="ddc9a1ab-2055-423e-af1f-365f8c49dbeb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="REST TestCase" searchProperties="true" authProfile="Inherit From Parent" xmlns:con="http://eviware.com/soapui/config">
             <con:settings><con:setting id="ddc9a1ab-2055-423e-af1f-365f8c49dbebfileName">REST-TestCase</con:setting></con:settings>
             <con:savedRecentRuns>1</con:savedRecentRuns>
+            
             <con:testStep type="restrequest" name="Login test step" id="a25567e2-cf41-495c-aaad-04a9513059a6">
                 <con:settings/>
                 <con:config service="http://localhost:8084" resourcePath="/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -39,13 +40,14 @@
                         <con:jmsPropertyConfig/>
                         <con:parameters>
   <con:entry key="SAMPLE" value=""/>
-  <con:entry key="password" value="Login123"/>
-  <con:entry key="username" value="Login"/>
+  <con:entry key="password" value="pw1234"/>
+  <con:entry key="username" value="testlogin"/>
 </con:parameters>
                         <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>SAMPLE</con:entry></con:parameterOrder>
-                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
             </con:testStep>
+            
             <con:testStep type="restrequest" name="Search test step" id="2d4d2cc1-e271-41b4-9a44-281e52af8035">
                 <con:settings/>
                 <con:config service="http://localhost:8084" resourcePath="/search" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -75,10 +77,9 @@
   <con:entry key="sessionid" value="${Login test step#Response#$['sessionid']}"/>
   <con:entry key="searchstring" value="Item 1"/>
 </con:parameters>
-                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
-            </con:testStep>
-            <con:testStep type="restrequest" name="Logout test step" id="ed7ee62e-feff-43d9-8102-b00a4f2a082b">
+            </con:testStep><con:testStep type="restrequest" name="Logout test step" id="ed7ee62e-feff-43d9-8102-b00a4f2a082b">
                 <con:settings/>
                 <con:config service="http://localhost:8084" resourcePath="/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <con:restRequest name="Logout test step" id="f1c29317-1395-4ebb-a1bb-16b22c832cdf" mediaType="application/json">
@@ -106,10 +107,9 @@
                         <con:parameterOrder>
                             <con:entry>sessionid</con:entry>
                         </con:parameterOrder>
-                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
-            </con:testStep>
-            <con:setupScript>virtRunner.run("ServiceSoapBinding MockService")
+            </con:testStep><con:setupScript>virtRunner.run("ServiceSoapBinding MockService")
                 virtRunner.run("RESTMockService")
             </con:setupScript>
             <con:properties/>
@@ -129,4 +129,4 @@
                 <con:status>NONE</con:status>
                 <con:properties/>
             </con:breakPoints>
-        <con:environmentSpec><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec><con:tagId>c9efde76-139b-4468-aa39-a6472c796cb4</con:tagId><con:tagId>14c76f1f-1ad9-49d9-b09f-a33ddf0e79b2</con:tagId></con:testCase>
+        <con:environmentSpec><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec><con:tagId>c9efde76-139b-4468-aa39-a6472c796cb4</con:tagId><con:tagId>14c76f1f-1ad9-49d9-b09f-a33ddf0e79b2</con:tagId></con:testCase>

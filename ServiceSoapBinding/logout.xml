@@ -17,12 +17,12 @@
                     <con:username xsi:nil="true"/>
                     <con:password xsi:nil="true"/>
                     <con:domain xsi:nil="true"/>
-                    <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+                    <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
                     <con:authType>No Authorization</con:authType>
                 </con:credentials>
                 <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
                 <con:jmsPropertyConfig/>
                 <con:wsaConfig mustUnderstand="NONE" version="200508"/>
                 <con:wsrmConfig version="1.2"/>
-            <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:call>
+            <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:call>
         </con:operation>
