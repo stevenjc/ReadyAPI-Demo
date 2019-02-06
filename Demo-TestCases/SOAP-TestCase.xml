@@ -21,15 +21,15 @@
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
                         <con:encoding>UTF-8</con:encoding>
-                        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+                        <con:endpoint>http://127.0.0.1:8084/mockServiceSoapBinding</con:endpoint>
                         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
  <soapenv:Header/>
- <soapenv:Body>
+   <soapenv:Body>
  <sam:login>
  <username>Login</username>
- <password>Login123</password>
- </sam:login>
- </soapenv:Body>
+         <password>Login123</password>
+      </sam:login>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
                         <con:assertion type="SOAP Response" id="59890894-3a1f-4cc3-8b8c-e4c1189f460a"/>
                         <con:assertion type="Schema Compliance" id="cf765eec-4eef-4f78-8731-885355c52a51">
@@ -60,7 +60,7 @@
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
                         <con:encoding>UTF-8</con:encoding>
-                        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+                        <con:endpoint>http://127.0.0.1:8084/mockServiceSoapBinding</con:endpoint>
                         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
  <soapenv:Header/>
  <soapenv:Body>
@@ -99,7 +99,7 @@
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
                         <con:encoding>UTF-8</con:encoding>
-                        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+                        <con:endpoint>http://127.0.0.1:8084/mockServiceSoapBinding</con:endpoint>
                         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
  <soapenv:Header/>
  <soapenv:Body>
@@ -134,7 +134,7 @@
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
                         <con:encoding>UTF-8</con:encoding>
-                        <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+                        <con:endpoint>http://127.0.0.1:8084/mockServiceSoapBinding</con:endpoint>
                         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sam="http://www.soapui.org/sample/">
  <soapenv:Header/>
  <soapenv:Body>

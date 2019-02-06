@@ -6,7 +6,7 @@
             <con:testStep type="restrequest" name="Login test step" id="a25567e2-cf41-495c-aaad-04a9513059a6">
                 <con:settings/>
                 <con:config service="http://localhost:8084" resourcePath="/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                    <con:restRequest name="Login test step" id="f0635073-e001-43aa-9998-b56c4836b1b1" mediaType="application/json" postQueryString="false">
+                    <con:restRequest name="Login test step" id="f0635073-e001-43aa-9998-b56c4836b1b1" mediaType="application/json" postQueryString="false" sslKeystore="00000000-0000-0000-0000-000000000000">
                         <con:settings>
                             <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
                         </con:settings>
@@ -39,11 +39,11 @@
                         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
                         <con:jmsPropertyConfig/>
                         <con:parameters>
-  <con:entry key="SAMPLE" value=""/>
   <con:entry key="password" value="pw1234"/>
+  <con:entry key="optional" value=""/>
   <con:entry key="username" value="testlogin"/>
 </con:parameters>
-                        <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>SAMPLE</con:entry></con:parameterOrder>
+                        <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>optional</con:entry></con:parameterOrder>
                     <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
             </con:testStep>
@@ -112,7 +112,7 @@
             </con:testStep><con:setupScript>virtRunner.run("ServiceSoapBinding MockService")
                 virtRunner.run("RESTMockService")
             </con:setupScript>
-            <con:properties/>
+            <con:properties><con:property><con:name>modded-sessionid</con:name><con:value>modified</con:value></con:property></con:properties>
             <con:reportParameters/>
             <con:breakPoints>
                 <con:testStepId>2d4d2cc1-e271-41b4-9a44-281e52af8035</con:testStepId>

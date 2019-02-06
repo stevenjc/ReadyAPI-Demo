@@ -6,7 +6,9 @@ Demo-TestCases
 JDBC-Tests
 TestSuite-1
 ServiceSoapBinding-MockService
+SOAP-Virtual-Service-1
 REST-Demo-Service
 Insecure-REST-Demo-Service
 Test
+SmartStore-API
 JDBC-Virtual-Service-1

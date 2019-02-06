@@ -21,7 +21,7 @@
             </con:parameters>
             <con:method name="Login" id="9ea60d1b-c865-4e88-a64c-9277fe9f49c8" method="POST">
                 <con:settings/>
-                <con:parameters><con:parameter required="true"><con:name>auth</con:name><con:value/><con:style>HEADER</con:style><con:default/></con:parameter><con:parameter required="true"><con:name>SAMPLE</con:name><con:value/><con:style>HEADER</con:style><con:default/></con:parameter></con:parameters>
+                <con:parameters><con:parameter required="true"><con:name>auth</con:name><con:value/><con:style>HEADER</con:style><con:default/></con:parameter><con:parameter required="false"><con:name>optional</con:name><con:value/><con:style>QUERY</con:style><con:default/></con:parameter></con:parameters>
                 <con:representation type="RESPONSE">
                     <con:mediaType xsi:nil="true"/>
                     <con:status>0</con:status>
@@ -30,7 +30,7 @@
                 </con:representation>
                 <con:representation type="FAULT">
                     <con:mediaType xsi:nil="true"/>
-                    <con:status>500</con:status>
+                    <con:status>500 404</con:status>
                     <con:params/>
                     <con:element>data</con:element>
                 </con:representation>
@@ -164,12 +164,12 @@
                         <con:authType>No Authorization</con:authType>
                     </con:credentials>
                     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-                    <con:parameters>
+                    <con:jmsPropertyConfig/><con:parameters>
   <con:entry key="password" value="Login123"/>
   <con:entry key="auth" value="${#Project#Some Property}"/>
   <con:entry key="username" value="Login"/>
 </con:parameters>
-                    <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>SAMPLE</con:entry></con:parameterOrder>
+                    <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>optional</con:entry></con:parameterOrder>
                 <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
             </con:method>
         </con:resource>

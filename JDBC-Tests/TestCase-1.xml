@@ -11,7 +11,7 @@ if(responseAsXml != ""){
 		}
 	}
 }
-</script></con:config></con:testStep><con:testStep type="datasource" name="Creds" id="c935d32e-7678-4e8d-8149-a75176115d2a" disabled="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting></con:settings><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="JDBC"><con:configuration><driver>org.postgresql.Driver</driver><connstr>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</connstr><pass>Sandpiper16</pass><Connection>Postgres( Default environment )</Connection><query>SELECT * FROM user_information LIMIT 5;</query><fetchSize/><stored-procedure>false</stored-procedure></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>username</con:property><con:property>password</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="Login" id="e38ec19c-24c5-4892-968b-d5853cee9d79" disabled="true">
+</script></con:config></con:testStep><con:testStep type="datasource" name="Creds" id="c935d32e-7678-4e8d-8149-a75176115d2a" disabled="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting></con:settings><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="JDBC"><con:configuration><driver>org.postgresql.Driver</driver><connstr>jdbc:postgresql://127.0.0.1:5432/database?user=postgres&amp;password=PASS_VALUE</connstr><pass>postgre</pass><Connection>Postgres( test )</Connection><query>SELECT * FROM user_information LIMIT 5;</query><fetchSize/><stored-procedure>false</stored-procedure></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>username</con:property><con:property>password</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="Login" id="e38ec19c-24c5-4892-968b-d5853cee9d79" disabled="true">
                 <con:settings/>
                 <con:config service="http://localhost:8084" resourcePath="/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                     <con:restRequest name="Login" id="f0635073-e001-43aa-9998-b56c4836b1b1" mediaType="application/json" postQueryString="false">
@@ -47,11 +47,11 @@ if(responseAsXml != ""){
                         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
                         <con:jmsPropertyConfig/>
                         <con:parameters>
-  <con:entry key="SAMPLE" value=""/>
   <con:entry key="password" value="${Creds#password}"/>
+  <con:entry key="optional" value=""/>
   <con:entry key="username" value="${Creds#username}"/>
 </con:parameters>
-                        <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>SAMPLE</con:entry></con:parameterOrder>
+                        <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>optional</con:entry></con:parameterOrder>
                     <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
             </con:testStep><con:testStep type="groovy" name="Check Login" id="80575924-e246-4432-9a8c-3253ef0e11e0" disabled="true"><con:settings/><con:config><script>def login = testRunner.testCase.getTestStepByName("Login")
