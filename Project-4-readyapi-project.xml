@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8b6feafc-e99a-4c4c-9f00-48f975813a2f" created="2.6.0" activeEnvironment="Default environment" name="Project 4" resourceRoot="" updated="2.7.0-AT 2019-04-30T04:36:09Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="89e54f54-6a30-4a4d-ad67-89522479175f" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://www.bestbuy.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://www.bestbuy.com</con:endpoint></con:endpoints><con:resource name="Item" path="/pricing/v1/price/item" id="9435924e-1cfe-4a07-90c9-1510f518269a"><con:settings/><con:parameters/><con:method name="Item" id="a301a327-5e3f-4cdb-84db-0677306bbb8e" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>catalog</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>context</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>includeOpenboxPrice</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>lib-price</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>salesChannel</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>skuId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>usePriceWithCart</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>visitorId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>X-CLIENT-ID</con:name><con:style>HEADER</con:style></con:parameter><con:parameter><con:name>credentials</con:name><con:style>HEADER</con:style></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:item="https://www.bestbuy.com/pricing/v1/price/item">item:Response</con:element></con:representation><con:request name="Request 1" id="82e9bcf5-3d4c-4a34-9ec2-751350ff3bf9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="carousel"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="2150048"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 2" id="f8221b45-0ab1-40a2-b9da-f8c35dc1cec7" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="carousel"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="3073087"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 3" id="bc40f0f4-fc6c-41aa-848c-b48a0d1ef7bb" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="carousel"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="4289703"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 4" id="6e51c5d7-f454-4378-8aa0-1d6a7dec7253" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="PLP-PriceBlock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="6203946"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 5" id="2e39862b-8f5c-4763-9ed8-2d5cfd4d04a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="PDP-PostCard-BuyingOptions"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="2150048"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 6" id="12142484-352a-43e0-95be-05d8d5e72f20" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="PDP"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="2150048"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 7" id="68b29cdd-9dc7-4209-bb00-181878e0eff9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5596310"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 8" id="62a6c5a5-b3be-4a1a-91d9-3bd56e728519" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5329711"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 9" id="78b46214-102b-47a8-86e1-ad5a96814b26" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5712043"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 10" id="fb119a6c-991d-43fc-ae34-c6123725109c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="8579341"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 11" id="f90ec513-7baa-49c9-b4ea-ab650341d59b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5712042"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 12" id="a738c6fe-2dfe-4219-b6a7-fed95f92f0a4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5709096"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 13" id="0d51fd7f-db80-47fd-8d05-6991f28d2d58" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="*/*"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="x-client-id" value="BROWSE"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="catalog" value="BBY"/>
+  <con:entry key="context" value="AddToCartModal"/>
+  <con:entry key="X-CLIENT-ID" value="BROWSE"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="7881021"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:request><con:request name="Request 14" id="c4b875fd-227a-45d2-8bea-ef10ec717b82" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="*/*"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="x-client-id" value="BROWSE"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="catalog" value="BBY"/>
+  <con:entry key="context" value="AddToCartModal"/>
+  <con:entry key="X-CLIENT-ID" value="BROWSE"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="7888367"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="3f0fda2d-bdc5-4b51-94ea-cc6797ca27c5" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://context.bestbuy.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://context.bestbuy.com</con:endpoint></con:endpoints><con:resource name="List" path="/api/recommendations/list" id="801704de-175d-4e68-a9e2-7b3e416d2232"><con:settings/><con:parameters/><con:method name="List" id="34dd7e73-de3f-43a7-9fde-a5d641cef65a" method="GET"><con:settings/><con:parameters><con:parameter required="true"><con:name>plmt</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>src</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>pageSize</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>apiKey</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>cat</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>item</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>c_id</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter required="true"><con:name>vt</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>Origin</con:name><con:style>HEADER</con:style></con:parameter></con:parameters><con:request name="Request 1" id="fb353e45-41ad-489a-862d-5f00dbb735dd" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Origin" value="https://www.bestbuy.com"/>
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://context.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://context.bestbuy.com/api/recommendations/list</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="Origin" value="https://www.bestbuy.com"/>
+  <con:entry key="item" value="2150048"/>
+  <con:entry key="apiKey" value="D50"/>
+  <con:entry key="src" value="Dotcom-l"/>
+  <con:entry key="plmt" value="shoppal-pdp"/>
+  <con:entry key="cat" value="abcat0910003"/>
+  <con:entry key="pageSize" value="6"/>
+  <con:entry key="c_id" value="88f53a7c-5490-11e9-b68d-0e8f55625ce2"/>
+  <con:entry key="vt" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>plmt</con:entry><con:entry>src</con:entry><con:entry>pageSize</con:entry><con:entry>apiKey</con:entry><con:entry>cat</con:entry><con:entry>item</con:entry><con:entry>c_id</con:entry><con:entry>vt</con:entry><con:entry>Origin</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="1737963d-7619-4a9d-9f92-24ea0ad1dc42" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="b035d70c-e24c-439b-a56e-685afe050334" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="BestBuy Test" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Item - Request 1" id="c5e97c33-cc51-41a3-9091-41d4b0bf19f1"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 1" id="82e9bcf5-3d4c-4a34-9ec2-751350ff3bf9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="1c069e9a-08c3-409f-ae29-010171773d78" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200, 201</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="1c4bad38-18c7-4dab-af1e-5e909ba84ca7" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="8620317b-09ac-4326-9485-f3c17e2f4ad5" name="Check for existence of [skuId]"><con:configuration><path>$['skuId']</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="e7c287c4-b6d2-48a3-9b61-ccc06cb397aa" name="Match content of [financeCodeName]"><con:configuration><path>$['financeOption']['financeCodeName']</path><content>12-Month Financing</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="MessageContentAssertion" id="99c3b86d-1182-40e0-b71c-012b714d5c50" name="Message Content Assertion"><con:configuration xsi:type="con:MessageContentAssertion"><con:elements><con:xpath>declare namespace ns1='https://www.bestbuy.com/pricing/v1/price/item';
+//ns1:Response[1]/ns1:skuId[1]</con:xpath><con:element>skuId</con:element><con:type xsi:nil="true"/><con:operator>=</con:operator><con:enabled>true</con:enabled><con:expectedValue>2150048</con:expectedValue><con:hasValue>false</con:hasValue><con:numberType>false</con:numberType></con:elements><con:elements><con:xpath>declare namespace ns1='https://www.bestbuy.com/pricing/v1/price/item';
+//ns1:Response[1]/ns1:regularPrice[1]</con:xpath><con:element>regularPrice</con:element><con:type xsi:nil="true"/><con:operator>=</con:operator><con:enabled>true</con:enabled><con:expectedValue>719.99</con:expectedValue><con:hasValue>false</con:hasValue><con:numberType>false</con:numberType></con:elements><con:elements><con:xpath>declare namespace ns1='https://www.bestbuy.com/pricing/v1/price/item';
+//ns1:Response[1]/ns1:currentPrice[1]</con:xpath><con:element>currentPrice</con:element><con:type xsi:nil="true"/><con:operator>=</con:operator><con:enabled>true</con:enabled><con:expectedValue>569.99</con:expectedValue><con:hasValue>false</con:hasValue><con:numberType>false</con:numberType></con:elements><con:elements><con:xpath>declare namespace ns1='https://www.bestbuy.com/pricing/v1/price/item';
+//ns1:Response[1]/ns1:priceEventType[1]</con:xpath><con:element>priceEventType</con:element><con:type xsi:nil="true"/><con:operator>=</con:operator><con:enabled>true</con:enabled><con:expectedValue>onSale</con:expectedValue><con:hasValue>false</con:hasValue><con:numberType>false</con:numberType></con:elements><con:originalMessage><![CDATA[<Response xmlns="https://www.bestbuy.com/pricing/v1/price/item">
+   <skuId>2150048</skuId>
+   <regularPrice>719.99</regularPrice>
+   <currentPrice>569.99</currentPrice>
+   <priceEventType>onSale</priceEventType>
+   <saleEventMessageType>ONSALE</saleEventMessageType>
+   <regularPriceMessageType>WAS</regularPriceMessageType>
+   <instantSavings>150.00</instantSavings>
+   <totalSavings>150.00</totalSavings>
+   <totalSavingsPercent>20</totalSavingsPercent>
+   <customerPrice>569.99</customerPrice>
+   <isMAP>true</isMAP>
+   <gspUnitPrice>569.99</gspUnitPrice>
+   <lowestOpenboxPrice>466.99</lowestOpenboxPrice>
+   <financeOption>
+      <offerId>286177</offerId>
+      <financeCodeName>12-Month Financing</financeCodeName>
+      <financeCode>3</financeCode>
+      <rank>8</rank>
+      <monthlyPayment>47.50</monthlyPayment>
+   </financeOption>
+   <dotComDisplayStatus>active</dotComDisplayStatus>
+   <currentAsOfDate>2019-04-01T15:16:51 GMT</currentAsOfDate>
+</Response>]]></con:originalMessage></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="b5f3d1e2-48ea-4655-b924-4df5ce86b0e1" name="Script Assertion"><con:configuration/></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="carousel"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="2150048"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 2" id="837b15fa-db40-48fb-b64d-3d36afdc8d09"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 2" id="f8221b45-0ab1-40a2-b9da-f8c35dc1cec7" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="carousel"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="3073087"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 3" id="8770e91a-c15a-489a-a626-54b949eea9af"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 3" id="bc40f0f4-fc6c-41aa-848c-b48a0d1ef7bb" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="carousel"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="4289703"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 4" id="6e26ec3e-2f06-4c52-9fdd-e35dc33346db"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 4" id="6e51c5d7-f454-4378-8aa0-1d6a7dec7253" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/searchpage.jsp?st=washer&amp;_dyncharset=UTF-8&amp;id=pcat17071&amp;type=page&amp;sc=Global&amp;cp=1&amp;nrp=&amp;sp=&amp;qp=&amp;list=n&amp;af=true&amp;iht=y&amp;usc=All+Categories&amp;ks=960&amp;keys=keys"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="PLP-PriceBlock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="6203946"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="List - Request 1" id="4f17b31e-066d-47a5-8ec9-6b574cbe1717"><con:settings/><con:config service="https://context.bestbuy.com" resourcePath="/api/recommendations/list" methodName="List" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="List - Request 1" id="fb353e45-41ad-489a-862d-5f00dbb735dd" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Origin" value="https://www.bestbuy.com"/>
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://context.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://context.bestbuy.com/api/recommendations/list</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="Origin" value="https://www.bestbuy.com"/>
+  <con:entry key="item" value="2150048"/>
+  <con:entry key="apiKey" value="D50"/>
+  <con:entry key="src" value="Dotcom-l"/>
+  <con:entry key="plmt" value="shoppal-pdp"/>
+  <con:entry key="cat" value="abcat0910003"/>
+  <con:entry key="pageSize" value="6"/>
+  <con:entry key="c_id" value="88f53a7c-5490-11e9-b68d-0e8f55625ce2"/>
+  <con:entry key="vt" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>plmt</con:entry><con:entry>src</con:entry><con:entry>pageSize</con:entry><con:entry>apiKey</con:entry><con:entry>cat</con:entry><con:entry>item</con:entry><con:entry>c_id</con:entry><con:entry>vt</con:entry><con:entry>Origin</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 5" id="f74f776d-9bfc-4125-a98c-6563eb4c8e79"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 5" id="2e39862b-8f5c-4763-9ed8-2d5cfd4d04a2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="PDP-PostCard-BuyingOptions"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="2150048"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 6" id="48e14de7-3b16-45d4-8575-10e4859c76e9"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 6" id="12142484-352a-43e0-95be-05d8d5e72f20" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="PDP"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="2150048"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 7" id="55a294e0-60dd-4221-988c-f5950880ada0"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 7" id="68b29cdd-9dc7-4209-bb00-181878e0eff9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5596310"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 8" id="4ef8cdf2-710b-469b-9431-2d5f5c68130c"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 8" id="62a6c5a5-b3be-4a1a-91d9-3bd56e728519" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5329711"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 9" id="2e1ff390-88ad-4dae-a2a7-61dd0b35cefe"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 9" id="78b46214-102b-47a8-86e1-ad5a96814b26" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5712043"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 10" id="b79fc006-12fd-4453-9f00-f4a4176f793c"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 10" id="fb119a6c-991d-43fc-ae34-c6123725109c" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="8579341"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 11" id="dcbcc125-6cd7-43ed-8fa7-2b6d4ad95799"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 11" id="f90ec513-7baa-49c9-b4ea-ab650341d59b" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5712042"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 12" id="16bd815b-80e4-4a8a-911c-cb95fb40a989"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 12" id="a738c6fe-2dfe-4219-b6a7-fed95f92f0a4" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="application/json"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="includeOpenboxPrice" value="true"/>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="catalog" value="bby"/>
+  <con:entry key="lib-price" value="5.0.0-rc.65"/>
+  <con:entry key="context" value="Shopping-Assistant-Priceblock"/>
+  <con:entry key="X-CLIENT-ID" value="lib-price-browser"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="5709096"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 13" id="781a0258-3ee0-4183-8c10-8f5d5f2e83c9"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 13" id="0d51fd7f-db80-47fd-8d05-6991f28d2d58" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="*/*"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="x-client-id" value="BROWSE"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="catalog" value="BBY"/>
+  <con:entry key="context" value="AddToCartModal"/>
+  <con:entry key="X-CLIENT-ID" value="BROWSE"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="7881021"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters><con:parameterOrder><con:entry>catalog</con:entry><con:entry>context</con:entry><con:entry>includeOpenboxPrice</con:entry><con:entry>lib-price</con:entry><con:entry>salesChannel</con:entry><con:entry>skuId</con:entry><con:entry>usePriceWithCart</con:entry><con:entry>visitorId</con:entry><con:entry>X-CLIENT-ID</con:entry><con:entry>credentials</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Item - Request 14" id="45a5f75c-fdb2-4fbf-97dd-5b53ff823bbc"><con:settings/><con:config service="https://www.bestbuy.com" resourcePath="/pricing/v1/price/item" methodName="Item" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Item - Request 14" id="c4b875fd-227a-45d2-8bea-ef10ec717b82" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Accept-Charset" value="ISO-8859-1,utf-8;q=0.7,*;q=0.7"/>
+  <con:entry key="Accept" value="*/*"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="x-client-id" value="BROWSE"/>
+  <con:entry key="User-Agent" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/605.1 (KHTML, like Gecko) JavaFX/8.0 Safari/605.1"/>
+  <con:entry key="Referer" value="https://www.bestbuy.com/site/maytag-4-3-cu-ft-11-cycle-high-efficiency-top-loading-washer-white/2150048.p?skuId=2150048"/>
+  <con:entry key="Accept-Encoding" value="gzip"/>
+  <con:entry key="Accept-Language" value="en-us;q=0.8,en;q=0.7"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>https://www.bestbuy.com</con:endpoint><con:request/><con:originalUri>https://www.bestbuy.com/pricing/v1/price/item</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:parameters>
+  <con:entry key="usePriceWithCart" value="true"/>
+  <con:entry key="credentials" value="include"/>
+  <con:entry key="catalog" value="BBY"/>
+  <con:entry key="context" value="AddToCartModal"/>
+  <con:entry key="X-CLIENT-ID" value="BROWSE"/>
+  <con:entry key="salesChannel" value="LargeView"/>
+  <con:entry key="skuId" value="7888367"/>
+  <con:entry key="visitorId" value="87c8d3cb-5490-11e9-8a39-0ed54d1782ba"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository/><con:tags/></con:soapui-project>

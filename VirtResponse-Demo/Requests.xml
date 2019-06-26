@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="a5524129-80e7-4c2b-b264-d996bb642c2d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Requests" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="a5524129-80e7-4c2b-b264-d996bb642c2dfileName">Requests</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="delay" name="Delay 2" id="babd7b02-0d6b-4076-8286-abaffbff05cf"><con:settings/><con:config><delay>150</delay></con:config></con:testStep><con:testStep type="restrequest" name="Add Dog [REST]" id="51e78a48-9f83-4a00-9ae3-1e1150b01ca7"><con:settings/><con:config service="Swagger Petstore" resourcePath="/v2/pet" methodName="addPet" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Add Dog [REST]" id="676a4c63-4662-4053-a9d5-f1f25dbde053" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8083</con:endpoint><con:request>{\r
+  "id" : 0,\r
+  "category" : {\r
+    "id" : 0,\r
+    "name" : "string"\r
+  },\r
+  "name" : "doggie",\r
+  "photoUrls" : [ "string" ],\r
+  "tags" : [ {\r
+    "id" : 0,\r
+    "name" : "string"\r
+  } ],\r
+  "status" : "available"\r
+}</con:request><con:originalUri>http://localhost/v2/pet</con:originalUri><con:assertion type="MessageContentAssertion" id="8e9e4971-4655-4f0e-949c-9a761f61e528" name="Message Content Assertion"><con:configuration xsi:type="con:MessageContentAssertion"><con:originalMessage><![CDATA[<Response xmlns="http://localhost/v2/pet">
+   <id>0</id>
+   <Category>
+      <id>0</id>
+      <name>string</name>
+   </Category>
+   <name>doggie</name>
+   <photoUrl>
+      <photoUrls>string</photoUrls>
+   </photoUrl>
+   <tag>
+      <Tag>
+         <id>0</id>
+         <name>string</name>
+      </Tag>
+   </tag>
+   <status>available</status>
+</Response>]]></con:originalMessage></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="a6bcf637-f2db-4b21-93c2-8be1b6519980" name="Check for existence of [status]"><con:configuration><path>$['status']</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="delay" name="Delay" id="4c2c0eb6-926a-47f9-a8fc-5a88fcf658f4"><con:settings/><con:config><delay>150</delay></con:config></con:testStep><con:testStep type="request" name="Add Numbers [SOAP]" id="4d3ed0fd-b67e-4564-95f2-34a3e0d270b8"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Add</con:operation><con:request name="Add Numbers [SOAP]" id="33e4ab0b-ec53-4d89-9ab9-8cfdb901320e"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8083/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Add>
+         <tem:intA>?</tem:intA>
+         <tem:intB>?</tem:intB>
+      </tem:Add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7bbe0ba9-715e-4c02-b194-2b4e0d4187db"/><con:assertion type="SOAP Fault Assertion" id="a48ce4b8-20ad-4188-b9d8-c2d5b1bed838"/><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>4c2c0eb6-926a-47f9-a8fc-5a88fcf658f4</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>babd7b02-0d6b-4076-8286-abaffbff05cf</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>51e78a48-9f83-4a00-9ae3-1e1150b01ca7</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase>

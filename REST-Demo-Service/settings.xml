@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:restMockService id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4" port="8084" path="/" host="localhost" name="REST Demo Service" routeModeEnabled="false" addUnmatchedOperation="false" routeUnmatchedOperation="false" xmlns:con="http://eviware.com/soapui/config">
+<con:restMockService id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4" port="8084" path="/" host="localhost" name="REST Demo Service" routeModeEnabled="false" addUnmatchedOperation="false" routeUnmatchedOperation="false" autoStart="false" xmlns:con="http://eviware.com/soapui/config">
         <con:settings><con:setting id="2a6dfe00-ebf7-44f2-8b96-64c69a5b5ed4fileName">REST-Demo-Service</con:setting></con:settings>
         <con:properties/>
         <con:onRequestScript>
@@ -16,7 +16,7 @@
                 <con:duration>40</con:duration><con:content/><con:endless>false</con:endless>
             </con:virtError>
         </con:constraints>
-        <con:dataSources><con:dataSource><con:dataSource type="JDBC"><con:configuration><driver/><connstr/><pass/><Connection/><query/><fetchSize/><stored-procedure>false</stored-procedure></con:configuration></con:dataSource><con:name>Data Source 1</con:name><con:property>sessionid</con:property></con:dataSource></con:dataSources><con:headerValidator type="NONE" customHeader="" customStartsWith=""/>
+        <con:dataSources/><con:headerValidator type="NONE" customHeader="" customStartsWith=""/>
         
         
         

@@ -10,4 +10,4 @@
         
         
         
-    </con:interface>
+    <con:environmentSpec><con:entry environmentId="Default"><con:authProfile>token</con:authProfile></con:entry><con:entry environmentId="c67c8434-b607-4a0d-bc5b-58a18d538310"><con:authProfile>token</con:authProfile></con:entry><con:entry environmentId="97e8a236-4a45-499b-8653-06f3a9b70c43"><con:authProfile>token</con:authProfile></con:entry></con:environmentSpec></con:interface>

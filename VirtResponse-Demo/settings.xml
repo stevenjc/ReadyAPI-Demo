@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="aa686523-0c04-4ae8-8536-b31880de78ef" name="VirtResponse Demo" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="aa686523-0c04-4ae8-8536-b31880de78effileName">VirtResponse-Demo</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>PARALLELL</con:runType><con:properties/><con:reportParameters/></con:testSuite>

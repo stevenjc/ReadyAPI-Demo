@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b922d31b-bce4-451c-9864-11998d4269d4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Virt Response" searchProperties="true" timeout="10000" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="b922d31b-bce4-451c-9864-11998d4269d4fileName">Virt-Response</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restmockresponse" name="POST PET" id="c07e7d51-cd0b-4de5-a569-0742ef99f4f8"><con:settings/><con:config xsi:type="con:RESTMockResponseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>Swagger Petstore</con:interface><con:path>/v2/pet</con:path><con:method>POST</con:method><con:port>8083</con:port><con:response mediaType="application/json" httpResponseStatus="200" id="18d1f347-ef60-4b30-9fd7-c77726d1f678" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070"><con:settings/><con:responseContent>{
+   "id": "0",
+   "Category": {
+      "id": "0",
+      "name": "string"
+   },
+   "name": "doggie",
+   "photoUrl": {
+      "photoUrls": "string"
+   },
+   "tag": {
+      "Tag": {
+         "id": "0",
+         "name": "string"
+      }
+   },
+   "status": "available"
+}</con:responseContent><con:responseContent/></con:response><con:host>localhost</con:host><con:assertion type="JsonPath Match" id="36a4cd8e-44f9-4c10-9107-0f7216721a0f"><con:configuration><path>$['status']</path><content>available</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion></con:config></con:testStep><con:testStep type="mockresponse" name="Add  Operation" id="09d350b5-556f-4476-8082-18230f676021"><con:settings/><con:config xsi:type="con:MockResponseStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculatorSoap</con:interface><con:operation>Add</con:operation><con:path>/</con:path><con:port>8083</con:port><con:response id="a7f774b2-3f04-4e09-ad12-b7bf5edd0dad" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:AddResponse>
+         <tem:AddResult>12</tem:AddResult>
+      </tem:AddResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508"/></con:response><con:assertion type="MessageContentAssertion" id="f5e5f54b-f801-404f-b4a2-a4f17880001d"><con:configuration xsi:type="con:MessageContentAssertion"><con:elements><con:xpath>declare namespace ns1='http://schemas.xmlsoap.org/soap/envelope/';
+//ns1:Header[1]</con:xpath><con:element>soapenv:Header</con:element><con:type>Header</con:type><con:operator>exists</con:operator><con:enabled>true</con:enabled><con:expectedValue xsi:nil="true"/><con:hasValue>false</con:hasValue><con:numberType>false</con:numberType></con:elements><con:elements><con:xpath>declare namespace ns1='http://tempuri.org/';
+//ns1:Add[1]/ns1:intA[1]</con:xpath><con:element>tem:intA</con:element><con:type xsi:nil="true"/><con:operator>exists</con:operator><con:enabled>true</con:enabled><con:expectedValue>?</con:expectedValue><con:hasValue>false</con:hasValue><con:numberType>false</con:numberType></con:elements><con:elements><con:xpath>declare namespace ns1='http://tempuri.org/';
+//ns1:Add[1]/ns1:intB[1]</con:xpath><con:element>tem:intB</con:element><con:type xsi:nil="true"/><con:operator>exists</con:operator><con:enabled>true</con:enabled><con:expectedValue>?</con:expectedValue><con:hasValue>false</con:hasValue><con:numberType>false</con:numberType></con:elements><con:originalMessage><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tem:Add>
+         <tem:intA>?</tem:intA>
+         <tem:intB>?</tem:intB>
+      </tem:Add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:originalMessage></con:configuration></con:assertion></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>c07e7d51-cd0b-4de5-a569-0742ef99f4f8</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase>

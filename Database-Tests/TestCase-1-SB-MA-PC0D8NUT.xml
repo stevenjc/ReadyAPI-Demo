@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="22ccf93e-a14c-437d-b66d-dd75555e201a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="22ccf93e-a14c-437d-b66d-dd75555e201afileName">TestCase-1</con:setting></con:settings><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="jdbc" name="JDBC Request" id="d6c3d951-aab7-4cd3-8783-9062ef95fef3"><con:settings><con:setting id="prettyPrintResponse">false</con:setting></con:settings><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" queryTimeout="100" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dbConnectionName>Postgres SQL </con:dbConnectionName><con:driver>org.postgresql.Driver</con:driver><con:connectionString>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</con:connectionString><con:password>Sandpiper16</con:password><con:connectionProperties/><con:query>Select * from user_information</con:query><con:assertion type="XPath Match" id="4e758714-0ded-46eb-9696-e4ce5c19e51e" name="Check count of [Row]"><con:configuration><path>count( //Results/ResultSet/Row)</path><content>100</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="75aa6dd5-1e48-4ca4-b2a0-ee6688fc09a6" name="Check for existence of [Results]"><con:configuration><path>exists( //Results)</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JDBC Status" id="0da20db6-2743-43cd-9a97-95594b991de7" name="JDBC Status"/><con:assertion type="JDBC Timeout" id="2286cff3-5f00-4746-85c9-c3d1d54e22e2" name="JDBC Timeout"><con:configuration><JDBCtimeout>100</JDBCtimeout></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="27edca22-9f6a-40a8-bc5b-0b5916a910e8" name="Response SLA"><con:configuration><SLA>200</SLA></con:configuration></con:assertion><con:properties/></con:config></con:testStep><con:testStep type="groovy" name="First Check" id="5270ae54-d10a-49be-af5e-74d136ba9766"><con:settings/><con:config><script>def responseAsXml = context.expand( '${JDBC Request#ResponseAsXml}' )
+
+stepsToEnable = ["Creds", "Check Login", "Login", "Logout", "Delay 2", "Creds Loop"]
+//log.info(responseAsXml)
+
+if(responseAsXml != ""){
+	for(testStep in context.testCase.getTestStepList()){
+		if(stepsToEnable.contains(testStep.getName())){
+			testStep.setDisabled(false) 
+		}
+	}
+}
+</script></con:config></con:testStep><con:testStep type="datasource" name="Creds" id="c935d32e-7678-4e8d-8149-a75176115d2a" disabled="true"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting></con:settings><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="JDBC"><con:configuration><driver>org.postgresql.Driver</driver><connstr>jdbc:postgresql://127.0.0.1:5432/postgres?user=postgres&amp;password=PASS_VALUE</connstr><pass>Sandpiper16</pass><Connection>Postgres( Default environment )</Connection><query>SELECT * FROM user_information LIMIT 5;</query><fetchSize/><stored-procedure>false</stored-procedure></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>username</con:property><con:property>password</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="Login" id="e38ec19c-24c5-4892-968b-d5853cee9d79" disabled="true">
+                <con:settings/>
+                <con:config service="http://localhost:8084" resourcePath="/login" methodName="Login" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Login" id="f0635073-e001-43aa-9998-b56c4836b1b1" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8084</con:endpoint>
+                        <con:request>{
+                            "domain" : "sample",
+                            "pre-emptive auth" : true
+                            }
+                        </con:request>
+                        <con:originalUri>http://localhost/login</con:originalUri>
+                        <con:assertion type="Valid HTTP Status Codes" id="e191c7c9-ccc6-4fb8-bf0d-a6f2af4ed5f9" name="Valid HTTP Status Codes">
+                            <con:settings/>
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="JsonPath Existence Match" id="780cec9a-e3bc-4128-84b1-9f7baf799275" name="Check for existence of [sessionid]">
+                            <con:configuration>
+                                <path>$['sessionid']</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+  <con:entry key="password" value="${Creds#password}"/>
+  <con:entry key="optional" value=""/>
+  <con:entry key="username" value="${Creds#username}"/>
+</con:parameters>
+                        <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>optional</con:entry></con:parameterOrder>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="groovy" name="Check Login" id="80575924-e246-4432-9a8c-3253ef0e11e0" disabled="true"><con:settings/><con:config><script>def login = testRunner.testCase.getTestStepByName("Login")
+
+def list = login.getAssertionList()
+
+stepsToEnable = ["Items", "Search", "Buy", "Delay", "Items Loop"]
+
+
+for( assertion in list){
+	//log.info(assertion.getProperties())
+	log.info(assertion.getName())
+	log.info(assertion.status)
+	if(assertion.getName() == "Check for existence of [sessionid]" &amp;&amp; assertion.status.toString() == "PASS"){
+		for(testStep in context.testCase.getTestStepList()){
+			if(stepsToEnable.contains(testStep.getName())){
+				testStep.setDisabled(false) 
+			}
+		}
+	}
+}</script></con:config></con:testStep><con:testStep type="datasource" name="Items" id="bd46c587-f190-4ada-9de0-67cf709509d0" disabled="true"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Grid"><con:configuration><check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry></xml-fragment>]]></check><row>&lt;xml-fragment>&lt;con:entry xmlns:con="http://eviware.com/soapui/config">Item 1&lt;/con:entry>&lt;con:entry xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></row><row>&lt;xml-fragment>&lt;con:entry xmlns:con="http://eviware.com/soapui/config">Item 2&lt;/con:entry>&lt;con:entry xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></row><row>&lt;xml-fragment>&lt;con:entry xmlns:con="http://eviware.com/soapui/config">Item 3&lt;/con:entry>&lt;con:entry xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></row><row>&lt;xml-fragment>&lt;con:entry xmlns:con="http://eviware.com/soapui/config"/>&lt;con:entry xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></row><recognizeAsPlainText>true</recognizeAsPlainText></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>item</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="Search" id="ff0b7c71-a4e3-4d1b-ad6e-551a697b6d18" disabled="true">
+                <con:settings/>
+                <con:config service="http://localhost:8084" resourcePath="/search" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Search" id="62e6693c-4a8b-4c46-8fdc-fbe4a2652fab" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8084</con:endpoint>
+                        <con:request>{
+                            "timestamp" : "${Login#Response#$['timestamp']}"
+                            }
+                        </con:request>
+                        <con:originalUri>http://localhost/search</con:originalUri>
+                        <con:assertion type="Valid HTTP Status Codes" id="15d75e75-93fa-43bc-99e8-ab2f9e786425" name="Valid HTTP Status Codes">
+                            <con:settings/>
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="JsonPath Existence Match" id="dd710b5e-1675-460a-a398-4da554bd8e55" name="Check for existence of [id]"><con:configuration><path>$['result']['item']['id']</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
+                            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+  <con:entry key="sessionid" value="${Login#Response#$['sessionid']}"/>
+  <con:entry key="searchstring" value="${Items#item}"/>
+</con:parameters>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="restrequest" name="Buy" id="b7a15d29-70e3-4ed1-a9d6-6d290a386043" disabled="true">
+                <con:settings/>
+                <con:config service="http://localhost:8084" resourcePath="/search" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Buy" id="62e6693c-4a8b-4c46-8fdc-fbe4a2652fab" mediaType="application/json" postQueryString="false">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8084</con:endpoint>
+                        <con:request>{
+                            "timestamp" : "${Login#Response#$['timestamp']}"
+                            }
+                        </con:request>
+                        <con:originalUri>http://localhost/search</con:originalUri>
+                        <con:assertion type="Valid HTTP Status Codes" id="59ab57cc-e61c-4b37-96ea-1bfa7bd7c3bd" name="Valid HTTP Status Codes">
+                            <con:settings/>
+                            <con:configuration><codes>200
+
+</codes></con:configuration>
+                        </con:assertion>
+                        <con:assertion type="JsonPath Existence Match" id="fa3a5c3b-a96b-455c-9ef1-7798f5c61856" name="Check for existence of [id]">
+                            <con:configuration>
+                                <path>$['result']['item']['id']</path>
+                                <content>true</content>
+                                <allowWildcards>false</allowWildcards>
+                                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                                <ignoreComments>false</ignoreComments>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:assertion type="JsonPath Match" id="7cb7083e-d78f-4d2b-9e2d-527e4b12ff4c" name="Match content of [price]"><con:configuration><path>$['result']['item']['price']</path><content>${Search#Response#$['result']['item']['price']}</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
+                            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters>
+  <con:entry key="sessionid" value="${Login#Response#$['sessionid']}"/>
+  <con:entry key="searchstring" value="${Items#item}"/>
+</con:parameters>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="delay" name="Delay" id="1efdc436-68b2-4a53-ab92-67e3b49de3c4" disabled="true"><con:settings/><con:config><delay>100</delay></con:config></con:testStep><con:testStep type="datasourceloop" name="Items Loop" id="e00f0a21-7096-4cd0-b7a7-9f64cb8c1478" disabled="true"><con:settings/><con:config><dataSourceStep>Items</dataSourceStep><targetStep>Search</targetStep><discardResults>true</discardResults></con:config></con:testStep><con:testStep type="restrequest" name="Logout" id="5c9af393-a071-4ead-a337-72f27fa24e6e" disabled="true">
+                <con:settings/>
+                <con:config service="http://localhost:8084" resourcePath="/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <con:restRequest name="Logout" id="f1c29317-1395-4ebb-a1bb-16b22c832cdf" mediaType="application/json">
+                        <con:settings>
+                            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+                        </con:settings>
+                        <con:endpoint>http://localhost:8084</con:endpoint>
+                        <con:request/>
+                        <con:originalUri>http://localhost/logout</con:originalUri>
+                        <con:assertion type="Valid HTTP Status Codes" id="6ac6f8bb-39cd-4140-bc62-f469de944750" name="Valid HTTP Status Codes">
+                            <con:settings/>
+                            <con:configuration>
+                                <codes>200</codes>
+                            </con:configuration>
+                        </con:assertion>
+                        <con:credentials>
+                            <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+                            <con:authType>No Authorization</con:authType>
+                        </con:credentials>
+                        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                        <con:jmsPropertyConfig/>
+                        <con:parameters><entry key="sessionid" value="${Login#Response#$.sessionid}" xmlns="http://eviware.com/soapui/config"/></con:parameters>
+                        <con:parameterOrder>
+                            <con:entry>sessionid</con:entry>
+                        </con:parameterOrder>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                </con:config>
+            </con:testStep><con:testStep type="delay" name="Delay 2" id="3fdbd51b-9579-4498-a310-3b53b6d7b880" disabled="true"><con:settings/><con:config><delay>100</delay></con:config></con:testStep><con:testStep type="datasourceloop" name="Creds Loop" id="813554f9-dd6e-4f5f-ac70-6c870212f65d" disabled="true"><con:settings/><con:config><dataSourceStep>Creds</dataSourceStep><targetStep>Login</targetStep><discardResults>true</discardResults></con:config></con:testStep><con:tearDownScript>//Set all TestSteps except first two as disabled
+for(testStep in testCase.getTestStepList()){
+		if (! testStep.getName().equals("JDBC Request") &amp;&amp; ! testStep.getName().equals("First Check") ){
+			testStep.setDisabled(true)
+		}
+}</con:tearDownScript><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>83f0a0cb-c339-4d2b-8071-f8e79c836703</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>e6849077-1466-499f-a9c1-bc4ba8961913</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>be969e9e-2dcc-4d0b-8d4c-bc2adb5c8953</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>5d693852-de3c-4afc-869a-f43515eff321</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>a1a83408-c379-4d66-850d-ceb9d8705d9f</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase>

@@ -4,37 +4,43 @@
             <con:defaultResponse>Item 1 Response</con:defaultResponse>
             <con:dispatchStyle>SCRIPT</con:dispatchStyle>
             <con:dispatchConfig/>
-            <con:dispatchPath>def queryString = mockRequest.getRequest().getQueryString()
+            <con:dispatchPath>def rando = new Random()
 
-                String[] fields = queryString.split("&amp;");
-                String[] kv;
+if(rando.nextInt(10) &lt;  3){
+	return "Error"
+}else{	
+	def queryString = mockRequest.getRequest().getQueryString()
 
-                HashMap&lt;String, String> params = new HashMap&lt;String, String>()
-                for (int i = 0; i &lt; fields.length; ++i){
-                kv = fields[i].split("=");
-                if (2 == kv.length)
-                params.put(kv[0], kv[1]);
-                }
+      String[] fields = queryString.split("&amp;");
+      String[] kv;
 
-                def buystring = URLDecoder.decode(params.get("buystring"), "UTF-8")
+      HashMap&lt;String, String> params = new HashMap&lt;String, String>()
+      for (int i = 0; i &lt; fields.length; ++i){
+      kv = fields[i].split("=");
+      if (2 == kv.length)
+      params.put(kv[0], kv[1]);
+      }
 
-                if (buystring == "all")
-                return "WildCard Response"
-                else if (buystring == "Item 1")
-                return "Item 1 Response"
-                else if (buystring == "Item 2")
-                return "Item 2 Response"
-                else if (buystring == "Item 3")
-                return "Item 3 Response"
-                else if (buystring == "Item 4")
-                return "Item 3 Response"
-                else if (buystring == "Item 5")
-                return "Item 5 Response"
-                else
-                return "Unknown Response"
+      def buystring = URLDecoder.decode(params.get("buystring"), "UTF-8")
+
+      if (buystring == "all")
+      return "WildCard Response"
+      else if (buystring == "Item 1")
+      return "Item 1 Response"
+      else if (buystring == "Item 2")
+      return "Item 2 Response"
+      else if (buystring == "Item 3")
+      return "Item 3 Response"
+      else if (buystring == "Item 4")
+      return "Item 3 Response"
+      else if (buystring == "Item 5")
+      return "Item 5 Response"
+      else
+      return "Unknown Response"
 
 
-                return "Search Response"
+      return "Search Response"
+}
             </con:dispatchPath>
             <con:dispatchXPath/>
             <con:parameterDispatcherRuleContainer/>
@@ -137,4 +143,7 @@
                     }
                 </con:responseContent>
             </con:response>
-        </con:restMockAction>
+        <con:response name="Error" id="d4d5f2a5-fc38-4777-a84b-0c0c99d51877" httpResponseStatus="400" mediaType="application/json" compressedBodyContent="aced00057372002f636f6d2e657669776172652e736f617075692e696d706c2e737570706f72742e436f6d7072657373656456616c7565000b8b02c748eeab0200025a000a636f6d707265737365645b0004646174617400025b4278700070" dataSource=""><con:settings/><con:responseContent>{
+	"Status": "Bad Request"
+}
+</con:responseContent></con:response></con:restMockAction>

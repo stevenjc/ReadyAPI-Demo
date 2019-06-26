@@ -1,3 +1,5 @@
 REST-TestCase.xml
-Data-Driven-REST-TestCase.xml
+Excel-Data-Driven-REST-TestCase.xml
 SOAP-TestCase.xml
+JDBC-Data-Driven-REST-TestCase.xml
+Grid-Data-Driven-REST-TestCase.xml

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface name="ServiceSoapBinding" bindingName="{http://www.soapui.org/sample/}ServiceSoapBinding" soapVersion="1_1" definition="http://localhost:8084/mockServiceSoapBinding?WSDL" xsi:type="con:WsdlInterface" wsaVersion="NONE" id="fae107bc-af20-46d6-977a-9ac1cff067be" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+        <con:settings><con:setting id="fae107bc-af20-46d6-977a-9ac1cff067befileName">ServiceSoapBinding</con:setting></con:settings>
+        <con:endpoints>
+            <con:endpoint>http://127.0.0.1:8083/mockServiceSoapBinding</con:endpoint>
+            <con:endpoint>http://localhost:8084/mockServiceSoapBinding</con:endpoint>
+        <con:endpoint>http://www.soapui.org/sample</con:endpoint></con:endpoints>
+        
+        
+        
+        
+        
+    </con:interface>

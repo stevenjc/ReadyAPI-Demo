@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="ddc9a1ab-2055-423e-af1f-365f8c49dbeb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="REST TestCase" searchProperties="true" authProfile="Inherit From Parent" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="ddc9a1ab-2055-423e-af1f-365f8c49dbeb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="REST TestCase" searchProperties="true" authProfile="No Authorization" xmlns:con="http://eviware.com/soapui/config">
             <con:settings><con:setting id="ddc9a1ab-2055-423e-af1f-365f8c49dbebfileName">REST-TestCase</con:setting></con:settings>
             <con:savedRecentRuns>1</con:savedRecentRuns>
             
@@ -39,12 +39,12 @@
                         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
                         <con:jmsPropertyConfig/>
                         <con:parameters>
-  <con:entry key="password" value="pw1234"/>
+  <con:entry key="password" value="testpw"/>
   <con:entry key="optional" value=""/>
   <con:entry key="username" value="testlogin"/>
 </con:parameters>
                         <con:parameterOrder><con:entry>username</con:entry><con:entry>password</con:entry><con:entry>auth</con:entry><con:entry>optional</con:entry></con:parameterOrder>
-                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile><con:sslKeyStore>00000000-0000-0000-0000-000000000000</con:sslKeyStore></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile><con:sslKeyStore>00000000-0000-0000-0000-000000000000</con:sslKeyStore></con:entry><con:entry environmentId="c67c8434-b607-4a0d-bc5b-58a18d538310"><con:authProfile>Inherit From Parent</con:authProfile><con:sslKeyStore>00000000-0000-0000-0000-000000000000</con:sslKeyStore></con:entry><con:entry environmentId="97e8a236-4a45-499b-8653-06f3a9b70c43"><con:authProfile>Inherit From Parent</con:authProfile><con:sslKeyStore>00000000-0000-0000-0000-000000000000</con:sslKeyStore></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
             </con:testStep>
             
@@ -57,8 +57,8 @@
                         </con:settings>
                         <con:endpoint>http://localhost:8084</con:endpoint>
                         <con:request>{
-                            "timestamp" : "${Login test step#Response#$['timestamp']}"
-                            }
+	"timestamp" : "${Login test step#Response#$['timestamp']}"
+}
                         </con:request>
                         <con:originalUri>http://localhost/search</con:originalUri>
                         <con:assertion type="Valid HTTP Status Codes" id="15d75e75-93fa-43bc-99e8-ab2f9e786425" name="Valid HTTP Status Codes">
@@ -67,7 +67,7 @@
                                 <codes>200</codes>
                             </con:configuration>
                         </con:assertion>
-                        <con:credentials>
+                        <con:assertion type="JsonPath Existence Match" id="f1ee0d47-c5d4-4824-ac5b-d6c1eac98bfd" name="JsonPath Existence Match"><con:configuration><path>$['result']['item']['id']</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials>
                             <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
                             <con:authType>No Authorization</con:authType>
                         </con:credentials>
@@ -77,7 +77,7 @@
   <con:entry key="sessionid" value="${Login test step#Response#$['sessionid']}"/>
   <con:entry key="searchstring" value="Item 1"/>
 </con:parameters>
-                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c67c8434-b607-4a0d-bc5b-58a18d538310"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="97e8a236-4a45-499b-8653-06f3a9b70c43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
             </con:testStep><con:testStep type="restrequest" name="Logout test step" id="ed7ee62e-feff-43d9-8102-b00a4f2a082b">
                 <con:settings/>
@@ -107,12 +107,12 @@
                         <con:parameterOrder>
                             <con:entry>sessionid</con:entry>
                         </con:parameterOrder>
-                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
+                    <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c67c8434-b607-4a0d-bc5b-58a18d538310"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="97e8a236-4a45-499b-8653-06f3a9b70c43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:restRequest>
                 </con:config>
             </con:testStep><con:setupScript>virtRunner.run("ServiceSoapBinding MockService")
                 virtRunner.run("RESTMockService")
             </con:setupScript>
-            <con:properties><con:property><con:name>modded-sessionid</con:name><con:value>modified</con:value></con:property></con:properties>
+            <con:properties><con:property><con:name>equipment</con:name><con:value>modified</con:value></con:property></con:properties>
             <con:reportParameters/>
             <con:breakPoints>
                 <con:testStepId>2d4d2cc1-e271-41b4-9a44-281e52af8035</con:testStepId>
@@ -129,4 +129,4 @@
                 <con:status>NONE</con:status>
                 <con:properties/>
             </con:breakPoints>
-        <con:environmentSpec><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec><con:tagId>c9efde76-139b-4468-aa39-a6472c796cb4</con:tagId><con:tagId>14c76f1f-1ad9-49d9-b09f-a33ddf0e79b2</con:tagId></con:testCase>
+        <con:environmentSpec><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c67c8434-b607-4a0d-bc5b-58a18d538310"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="97e8a236-4a45-499b-8653-06f3a9b70c43"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec><con:tagId>c9efde76-139b-4468-aa39-a6472c796cb4</con:tagId><con:tagId>14c76f1f-1ad9-49d9-b09f-a33ddf0e79b2</con:tagId></con:testCase>

@@ -18,7 +18,7 @@
             <con:method name="Method 1" id="776de6e3-98ad-49a2-9676-be7bfeff03f0" method="POST">
                 <con:settings/>
                 <con:parameters/>
-                <con:request name="Request 1" id="15159f81-8f38-48e1-8e4d-5ca7e66b117c" mediaType="application/json" postQueryString="false">
+                <con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:buy="http://localhost/buy">buy:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:buy="http://localhost/buy">buy:Fault</con:element></con:representation><con:request name="Request 1" id="15159f81-8f38-48e1-8e4d-5ca7e66b117c" mediaType="application/json" postQueryString="false">
                     <con:settings>
                         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/>
                         </con:setting>
@@ -33,6 +33,6 @@
                     <con:parameters>
                         <entry key="buystring" value="Item 1" xmlns="http://eviware.com/soapui/config"/>
                     </con:parameters>
-                <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>No Authorization</con:authProfile></con:entry></con:environmentSpec></con:request>
+                <con:environmentSpec><con:entry environmentId="a4c83565-407a-445f-aef0-20875c955ee7"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="7b6fec38-2cc4-4e24-a710-c6782a1f7a32"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="fb35a5d4-11d0-492d-b2c9-77f68fabf8ad"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="cd3bec7c-35ca-4b4f-be58-3fb538302b43"><con:authProfile>No Authorization</con:authProfile></con:entry><con:entry environmentId="9be88eae-b0c2-4202-92a3-695c29ee3e72"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c91971d4-3285-40e4-830d-e3475feb46a6"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="c67c8434-b607-4a0d-bc5b-58a18d538310"><con:authProfile>Inherit From Parent</con:authProfile></con:entry><con:entry environmentId="97e8a236-4a45-499b-8653-06f3a9b70c43"><con:authProfile>Inherit From Parent</con:authProfile></con:entry></con:environmentSpec></con:request>
             </con:method>
         </con:resource>
